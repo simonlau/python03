@@ -10,4 +10,9 @@
 - Raw: raw/assignment-expressions/the-walrus-operator-pythons-assignment-expressions.md
 - Updated: Walrus Operator
 
+## [2026-10-29] ingest | Command-Line Arguments
+- Disposition: New
+- Raw: raw/command-line-arguments/python-command-line-arguments.md
+- Updated: Command-Line Arguments
+
 ## [2026-10-29] lint | 0 issues found, 0 auto-fixed

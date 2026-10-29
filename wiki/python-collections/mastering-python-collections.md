@@ -60,3 +60,4 @@ The document includes AI instructions for learners: use AI to reduce repetitive 
 ## See Also
 
 - [Walrus Operator](../assignment-expressions/walrus-operator.md) — assignment expressions usable inside comprehensions.
+- [Command-Line Arguments](../command-line-arguments/command-line-arguments.md) — `sys.argv` and CLI conventions (Exercise 0 introduces command-line parameters via `sys`).

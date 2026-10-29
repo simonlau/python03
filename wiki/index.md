@@ -8,6 +8,14 @@ Python assignment expressions (the walrus operator, `:=`) introduced in Python 3
 |---------|---------|---------|
 | [Walrus Operator](assignment-expressions/walrus-operator.md) | Assignment expressions that assign values within expressions to avoid repetition in loops, comprehensions, and conditionals. | 2026-10-29 |
 
+## command-line-arguments
+
+Python command-line arguments via `sys.argv`, CLI conventions, parsing approaches, and the `argparse`/`getopt` standard libraries.
+
+| Article | Summary | Updated |
+|---------|---------|---------|
+| [Command-Line Arguments](command-line-arguments/command-line-arguments.md) | `sys.argv`, CLI anatomy and conventions, parsing approaches, standard streams, validation, and `argparse`/`getopt`/`Click`. | 2026-10-29 |
+
 ## python-collections
 
 Python collection types (lists, tuples, sets, dicts, generators, comprehensions) taught through game-themed programming exercises.
