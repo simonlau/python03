@@ -47,7 +47,7 @@ Introduced in Exercise 5 (Stream Wizard). Generators use the `yield` keyword to 
 
 ## Comprehensions
 
-Introduced in Exercise 6 (Data Alchemist). List and dictionary comprehensions transform and filter data efficiently in a condensed form. The exercise builds: (1) a list with all names capitalized, (2) a list of only the already-capitalized names, (3) a dictionary of names-to-random-scores, and (4) a second dictionary of scores above the average. Comprehensions also work on sets, and each should be on a single line unless it exceeds the line size.
+Introduced in Exercise 6 (Data Alchemist). List and dictionary comprehensions transform and filter data efficiently in a condensed form. The exercise builds: (1) a list with all names capitalized, (2) a list of only the already-capitalized names, (3) a dictionary of names-to-random-scores, and (4) a second dictionary of scores above the average. Comprehensions also work on sets, and each should be on a single line unless it exceeds the line size. Comprehensions can also combine with the walrus operator (`:=`) to avoid calling an expensive function twice when filtering — for example, `[value for num in numbers if (value := slow(num)) > 0]` calls `slow()` once per element. See the Walrus Operator article for details.
 
 ## Motivation and Context
 
@@ -58,3 +58,5 @@ The foreword uses Twitter’s early scaling challenges as a cautionary tale: sim
 The document includes AI instructions for learners: use AI to reduce repetitive tasks, develop prompting skills, understand how AI systems work to anticipate risks and biases, continue building technical and power skills with peers, and only use AI-generated content you fully understand and can take responsibility for. Learners should reflect before prompting, systematically review AI output, and seek peer review rather than relying solely on self-validation.
 
 ## See Also
+
+- [Walrus Operator](../assignment-expressions/walrus-operator.md) — assignment expressions usable inside comprehensions.
