@@ -20,4 +20,9 @@
 - Raw: raw/python-collections/python-tuple-data-type-deep-dive.md
 - Updated: Python Tuple
 
+## [2026-10-29] ingest | Type Aliases
+- Disposition: New
+- Raw: raw/type-aliases/2026-10-29-type-aliases.md
+- Updated: Type Aliases
+
 ## [2026-10-29] lint | 0 issues found, 0 auto-fixed

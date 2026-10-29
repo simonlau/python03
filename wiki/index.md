@@ -16,6 +16,14 @@ Python command-line arguments via `sys.argv`, CLI conventions, parsing approache
 |---------|---------|---------|
 | [Command-Line Arguments](command-line-arguments/command-line-arguments.md) | `sys.argv`, CLI anatomy and conventions, parsing approaches, standard streams, validation, and `argparse`/`getopt`/`Click`. | 2026-10-29 |
 
+## type-aliases
+
+Python type aliases: `TypeAlias`, the `type` statement (Python 3.12+), and `NewType` for static type checking.
+
+| Article | Summary | Updated |
+|---------|---------|---------|
+| [Type Aliases](type-aliases/type-aliases.md) | Defining type aliases via `TypeAlias`, `type` statements, and `NewType` for static type checking. | 2026-10-29 |
+
 ## python-collections
 
 Python collection types (lists, tuples, sets, dicts, generators, comprehensions) taught through game-themed programming exercises.
