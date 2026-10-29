@@ -33,7 +33,7 @@ Worked example: the tuple `(1.0, 2.5, 3.0)` has a distance to center of 4.0311; 
 
 ## Sets
 
-Introduced in Exercise 3 (Achievement Hunter). Sets are unordered collections of unique elements. The exercise uses set operations — union, intersection, and difference — to analyze achievement collections across multiple players: tracking all distinct achievements, finding achievements shared by all players, spotting per-player unique achievements, and listing missing achievements per player.
+Introduced in Exercise 3 (Achievement Hunter). Sets are unordered collections of unique elements. The exercise uses set operations — union, intersection, and difference — to analyze achievement collections across multiple players: tracking all distinct achievements, finding achievements shared by all players, spotting per-player unique achievements, and listing missing achievements per player. For a comprehensive treatment of Python’s `set` data type (construction, operations, comparisons, methods, traversal), see the Python Set article.
 
 ## Dictionaries
 

@@ -25,4 +25,9 @@
 - Raw: raw/type-aliases/2026-10-29-type-aliases.md
 - Updated: Type Aliases
 
+## [2026-10-29] ingest | Python Set
+- Disposition: New
+- Raw: raw/python-collections/python-sets-deep-dive.md
+- Updated: Python Set
+
 ## [2026-10-29] lint | 0 issues found, 0 auto-fixed
