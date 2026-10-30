@@ -62,3 +62,4 @@ The document includes AI instructions for learners: use AI to reduce repetitive 
 - [Walrus Operator](../assignment-expressions/walrus-operator.md) — assignment expressions usable inside comprehensions.
 - [Command-Line Arguments](../command-line-arguments/command-line-arguments.md) — `sys.argv` and CLI conventions (Exercise 0 introduces command-line parameters via `sys`).
 - [Python Tuple](python-tuple.md) — dedicated deep dive on Python’s `tuple` data type.
+- [Python List Comprehension](python-list-comprehension.md) — dedicated deep dive on Python list comprehensions: syntax, filtering, conditional logic, set/dict comprehensions, walrus operator.
