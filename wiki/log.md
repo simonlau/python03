@@ -45,4 +45,9 @@
 - Raw: raw/python-collections/python-list-comprehension.md
 - Updated: Python List Comprehension
 
+## [2026-10-30] ingest | Python Dictionary Comprehension
+- Disposition: New
+- Raw: raw/python-collections/python-dictionary-comprehension.md
+- Updated: Python Dictionary Comprehension
+
 ## [2026-10-29] lint | 0 issues found, 0 auto-fixed

@@ -149,3 +149,4 @@ Profile different approaches rather than relying on hunches. With `timeit`, comp
 - [Python Generators](python-generators.md) — generator expressions as a lazy alternative to list comprehensions for large datasets.
 - [Walrus Operator](../assignment-expressions/walrus-operator.md) — assignment expressions usable inside comprehension conditionals.
 - [Command-Line Arguments](../command-line-arguments/command-line-arguments.md) — `sys.argv` lists can be transformed with comprehensions.
+- [Python Dictionary Comprehension](python-dictionary-comprehension.md) — dedicated deep dive on Python dictionary comprehensions.
