@@ -24,6 +24,14 @@ Python type aliases: `TypeAlias`, the `type` statement (Python 3.12+), and `NewT
 |---------|---------|---------|
 | [Type Aliases](type-aliases/type-aliases.md) | Defining type aliases via `TypeAlias`, `type` statements, and `NewType` for static type checking. | 2026-10-29 |
 
+## random-data
+
+Random data generation in Python: PRNGs (`random`, `numpy.random`) and CSPRNGs (`os.urandom`, `secrets`, `uuid`).
+
+| Article | Summary | Updated |
+|---------|---------|---------|
+| [Generating Random Data in Python](random-data/random-data.md) | Random data generation: `random` module, `secrets`, `os.urandom`, `uuid`, `numpy.random`, seeding, and security considerations. | 2026-10-30 |
+
 ## python-collections
 
 Python collection types (lists, tuples, sets, dicts, generators, comprehensions) taught through game-themed programming exercises.

@@ -35,4 +35,9 @@
 - Raw: raw/python-collections/python-generators-deep-dive.md
 - Updated: Python Generators
 
+## [2026-10-30] ingest | Generating Random Data in Python
+- Disposition: New
+- Raw: raw/random-data/generating-random-data-python.md
+- Updated: Generating Random Data in Python
+
 ## [2026-10-29] lint | 0 issues found, 0 auto-fixed
