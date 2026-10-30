@@ -30,4 +30,9 @@
 - Raw: raw/python-collections/python-sets-deep-dive.md
 - Updated: Python Set
 
+## [2026-10-30] ingest | Python Generators
+- Disposition: New
+- Raw: raw/python-collections/python-generators-deep-dive.md
+- Updated: Python Generators
+
 ## [2026-10-29] lint | 0 issues found, 0 auto-fixed

@@ -33,3 +33,4 @@ Python collection types (lists, tuples, sets, dicts, generators, comprehensions)
 | [Mastering Python Collections](python-collections/mastering-python-collections.md) | Game-themed quest teaching Python lists, tuples, sets, dicts, generators, and comprehensions through seven exercises. | 2026-10-29 |
 | [Python Set](python-collections/python-set.md) | Dedicated deep dive on Python’s `set` data type: construction, operations, comparisons, methods, traversal, and when to use sets. | 2026-10-29 |
 | [Python Tuple](python-collections/python-tuple.md) | Dedicated deep dive on Python’s `tuple` data type: construction, indexing, slicing, immutability, packing/unpacking, and alternatives. | 2026-10-29 |
+| [Python Generators](python-collections/python-generators.md) | Dedicated deep dive on Python generators: generator functions, expressions, the `yield` statement, advanced methods (`.send`, `.throw`, `.close`), and data pipelines. | 2026-10-30 |
