@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 
+from typing import TypeAlias
 import sys
 
-Item = str
-Quantity = int
-Item_Quantity_Pair = tuple[Item, Quantity]
+Item: TypeAlias = str
+Quantity: TypeAlias = int
+Item_Quantity_Pair: TypeAlias = tuple[Item, Quantity]
 
 
 def str_to_tuple(s: str) -> Item_Quantity_Pair | None:
@@ -12,7 +13,7 @@ def str_to_tuple(s: str) -> Item_Quantity_Pair | None:
     value: str = ""
     try:
         key, value = s.split(":")
-    except ValueError as error:
+    except ValueError:
         print(f"Error - invalid parameter '{s}'")
         return None
     try:
@@ -25,11 +26,12 @@ def str_to_tuple(s: str) -> Item_Quantity_Pair | None:
         return None
 
 
-def main():
+def main() -> None:
     print("=== Inventory System Analysis ==")
     inventory: dict[Item, Quantity] = {}
     items: list[Item_Quantity_Pair] = [
-        item_quantity for s in sys.argv[1:]
+        item_quantity
+        for s in sys.argv[1:]
         if (item_quantity := str_to_tuple(s)) is not None
     ]
     for item, quantity in items:
@@ -60,11 +62,11 @@ def main():
         print(f"Item most abundant: {most[0]} with quantity {most[1]}")
         print(f"Item least abundant: {least[0]} with quantity {least[1]}")
     else:
-        print(f"Item most abundant: No item")
-        print(f"Item least abundant: No item")
-    inventory['magic_item'] = 1
+        print("Item most abundant: No item")
+        print("Item least abundant: No item")
+    inventory["magic_item"] = 1
     print(f"Updated inventory: {inventory}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

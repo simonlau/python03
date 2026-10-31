@@ -3,7 +3,7 @@
 import sys
 
 
-def main():
+def main() -> None:
     print("=== Command Quest ==")
     total = len(sys.argv) - 1
     if total == 0:
@@ -12,11 +12,11 @@ def main():
         return
     i = 0
     print(f"Arguments received: {total}")
-    while (i <= total):
+    while i <= total:
         print(f"Argument {i}: {sys.argv[i]}")
         i += 1
     print(f"Total arguments: {total + 1}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

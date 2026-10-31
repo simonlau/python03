@@ -1,38 +1,43 @@
 #!/usr/bin/env python3
 
+from typing import TypeAlias
 import random
 
+Achievement: TypeAlias = str
 
-def gen_player_achievements(achievements: list[str]):
+
+def gen_player_achievements(achievements: list[Achievement]) -> set[Achievement]:
     num = random.randint(3, len(achievements) + 3)
     i = 0
-    result = set()
-    while (i < num):
+    result: set[Achievement] = set()
+    while i < num:
         result.add(random.choice(achievements))
         i += 1
     return result
 
 
-def main():
-    achievements = ['Crafting Genius',
-                    'Strategist',
-                    'World Savior',
-                    'Speed Runner',
-                    'Survivor',
-                    'Master Explorer',
-                    'Treasure Hunter',
-                    'Unstoppable',
-                    'First Steps',
-                    'Collector Supreme',
-                    'Untouchable',
-                    'Sharp Mind',
-                    'Boss Slayer']
+def main() -> None:
+    achievements: list[Achievement] = [
+        "Crafting Genius",
+        "Strategist",
+        "World Savior",
+        "Speed Runner",
+        "Survivor",
+        "Master Explorer",
+        "Treasure Hunter",
+        "Unstoppable",
+        "First Steps",
+        "Collector Supreme",
+        "Untouchable",
+        "Sharp Mind",
+        "Boss Slayer",
+    ]
     print("=== Achievement Tracker System ==\n")
 
-    alice = gen_player_achievements(achievements)
-    bob = gen_player_achievements(achievements)
-    charlie = gen_player_achievements(achievements)
-    dylan = gen_player_achievements(achievements)
+    alice: set[Achievement] = gen_player_achievements(achievements)
+    bob: set[Achievement] = gen_player_achievements(achievements)
+    charlie: set[Achievement] = gen_player_achievements(achievements)
+    dylan: set[Achievement] = gen_player_achievements(achievements)
 
     print(f"Player Alice: {alice}")
     print(f"Player Bob: {bob}")
@@ -55,5 +60,5 @@ def main():
     print(f"Dylan is missing: {set(achievements) - dylan}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
