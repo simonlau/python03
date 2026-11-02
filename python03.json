@@ -1,0 +1,83 @@
+{
+  "LANGUAGE": {
+    "0": [
+      "name",
+      "constant",
+      "attribute",
+      "index",
+      "f-string",
+      "function call",
+      "if",
+      "def",
+      "return",
+      "=",
+      "+",
+      "-",
+      "*",
+      "/",
+      "|",
+      "<",
+      ">",
+      "<=",
+      ">=",
+      "+=",
+      "==",
+      "while",
+      "import",
+      "len",
+      "print"
+    ],
+    "1": [
+      "int",
+      "try",
+      "sum",
+      "max",
+      "min"
+    ],
+    "2": [
+      "tuple literal",
+      "**",
+      "float",
+      "input",
+      "round"
+    ],
+    "3": [
+      "set"
+    ],
+    "4": [
+      "dict literal",
+      "for",
+      "in"
+    ],
+    "5": [
+      "yield",
+      "next"
+    ],
+    "6": [
+      "list comprehension",
+      "dict comprehension"
+    ]
+  },
+  "IMPORTS": {
+    "0": {
+      "sys": [
+        "argv"
+      ]
+    },
+    "2": {
+      "math": [
+        "sqrt"
+      ]
+    },
+    "3": {
+      "random": [
+        "randint",
+        "choice"
+      ]
+    },
+    "5": {
+      "typing": []
+    }
+  },
+  "METHODS": {}
+}
