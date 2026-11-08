@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
-from typing import TypeAlias
 import sys
+from typing import TypeAlias
 
 Score: TypeAlias = int
 
@@ -9,10 +9,11 @@ Score: TypeAlias = int
 def str_to_score(s: str) -> Score | None:
     try:
         num = int(s)
-        return num
     except ValueError:
         print(f"Invalid parameter: '{s}'")
         return None
+    else:
+        return num
 
 
 def main() -> None:

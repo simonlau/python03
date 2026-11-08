@@ -1,11 +1,18 @@
 #!/usr/bin/env python3
 
-from typing import TypeAlias
 import sys
+from typing import TypeAlias
 
 Item: TypeAlias = str
 Quantity: TypeAlias = int
 Item_Quantity_Pair: TypeAlias = tuple[Item, Quantity]
+
+
+def int_to_quantity(num: int) -> Quantity:
+    if num < 0:
+        msg = f"Negative number for quantity: {num}"
+        raise ValueError(msg)
+    return num
 
 
 def str_to_tuple(s: str) -> Item_Quantity_Pair | None:
@@ -17,13 +24,12 @@ def str_to_tuple(s: str) -> Item_Quantity_Pair | None:
         print(f"Error - invalid parameter '{s}'")
         return None
     try:
-        quantity: Quantity = int(value)
-        if quantity < 0:
-            raise ValueError("Negative number for quantity: {quantity}")
-        return key, quantity
+        quantity = int_to_quantity(int(value))
     except ValueError as error:
         print(f"Quantity error for '{key}': {error}")
         return None
+    else:
+        return key, quantity
 
 
 def main() -> None:
@@ -43,7 +49,7 @@ def main() -> None:
     print(f"Item list: {list(inventory.keys())}")
 
     total: int = 0
-    for item, quantity in inventory.items():
+    for quantity in inventory.values():
         total += quantity
     print(f"Total quantity of the {len(inventory)} items: {total}")
 

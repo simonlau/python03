@@ -1,30 +1,39 @@
 #!/usr/bin/env python3
 
-from collections.abc import Iterator
-from collections.abc import Generator
-from typing import TypeAlias
 import random
+from collections.abc import Generator, Iterator
+from typing import TypeAlias
 
 Name: TypeAlias = str
 Action: TypeAlias = str
 Event: TypeAlias = tuple[Name, Action]
 
-actions: list[Action] = ["run", "eat", "sleep", "grab", "move", "climb", "swim"]
+actions: list[Action] = [
+    "run",
+    "eat",
+    "sleep",
+    "grab",
+    "move",
+    "climb",
+    "swim",
+]
 names: list[Name] = ["alice", "bob", "charlie", "dylan"]
 
 
 def gen_event() -> Generator[Event, None, None]:
     while True:
+        # ruff:ignore[suspicious-non-cryptographic-random-usage]
         action = random.choice(actions)
+        # ruff:ignore[suspicious-non-cryptographic-random-usage]
         name = random.choice(names)
         yield name, action
 
 
 def consume_event(events: list[Event]) -> Iterator[Event]:
     while True:
+        # ruff:ignore[suspicious-non-cryptographic-random-usage]
         index = random.randint(0, len(events) - 1)
-        event = events.pop(index)
-        yield event
+        yield events.pop(index)
         if len(events) == 0:
             return
 
@@ -33,7 +42,8 @@ def main() -> None:
     print("=== Game Data Stream Processor ==")
     i = 0
     event_generator = gen_event()
-    while i < 1000:
+    limit = 1000
+    while i < limit:
         name, action = next(event_generator)
         print(f"Event {i}: Player {name} did action {action}")
         i += 1

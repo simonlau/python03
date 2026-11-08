@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
-from typing import TypeAlias
 import math
+from typing import TypeAlias
 
 Coordinate: TypeAlias = tuple[float, float, float]
 
@@ -9,9 +9,10 @@ Coordinate: TypeAlias = tuple[float, float, float]
 def str_to_float(s: str) -> float | None:
     try:
         f = float(s)
-        return f
     except ValueError:
         print(f"Error on parameter {s}: could not convert string to float {s}")
+    else:
+        return f
     return None
 
 

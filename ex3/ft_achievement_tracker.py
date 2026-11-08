@@ -1,16 +1,34 @@
 #!/usr/bin/env python3
 
-from typing import TypeAlias
 import random
+from typing import Literal, TypeAlias
 
-Achievement: TypeAlias = str
+Achievement: TypeAlias = Literal[
+    "Crafting Genius",
+    "Strategist",
+    "World Savior",
+    "Speed Runner",
+    "Survivor",
+    "Master Explorer",
+    "Treasure Hunter",
+    "Unstoppable",
+    "First Steps",
+    "Collector Supreme",
+    "Untouchable",
+    "Sharp Mind",
+    "Boss Slayer",
+]
 
 
-def gen_player_achievements(achievements: list[Achievement]) -> set[Achievement]:
+def gen_player_achievements(
+    achievements: list[Achievement],
+) -> set[Achievement]:
+    # ruff:ignore[suspicious-non-cryptographic-random-usage]
     num = random.randint(3, len(achievements) + 3)
     i = 0
     result: set[Achievement] = set()
     while i < num:
+        # ruff:ignore[suspicious-non-cryptographic-random-usage]
         result.add(random.choice(achievements))
         i += 1
     return result
@@ -52,7 +70,7 @@ def main() -> None:
     print(f"Only Bob has: {bob - alice - charlie - dylan}")
     print(f"Only Charlie has: {charlie - alice - bob - dylan}")
     print(f"Only Dylan has: {dylan - alice - bob - charlie}")
-    print("")
+    print()
 
     print(f"Alice is missing: {set(achievements) - alice}")
     print(f"Bob is missing: {set(achievements) - bob}")
