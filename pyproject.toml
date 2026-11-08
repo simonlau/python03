@@ -7,23 +7,55 @@ dependencies = [ ]
 [tool.pyrefly]
 preset = "all"
 
-[tool.black]
-line-length = 88
-target-version = ['py311', 'py312', 'py313']
-include = '\.pyi?$'
-extend-exclude = '''
-/(
-    \.git
-  | \.hg
-  | \.mypy_cache
-  | \.tox
-  | \.venv
-  | _build
-  | buck-out
-  | build
-  | dist
-)/
-'''
+[tool.ruff]
+# Sets the max line length for the formatter and isort
+line-length = 79
+
+[tool.ruff.lint]
+# Enable absolutely everything by default
+preview = true
+select = [
+    "correctness",
+    "suspicious",
+    "complexity",
+    "performance",
+    "style",
+    "security",
+    "pedantic",
+    "restriction"
+]
+
+ignore = [
+    "undocumented-public-module",
+    "undocumented-public-class",
+    "undocumented-public-method",
+    "undocumented-public-function",
+    "undocumented-public-package",
+    "undocumented-magic-method",
+    "undocumented-public-init",
+    "incorrect-blank-line-before-class",
+    "multi-line-summary-second-line",
+    "missing-trailing-comma",
+    "single-line-implicit-string-concatenation",
+    "missing-copyright-notice",
+    "print",
+]
+
+# Ensure you enforce type checking annotations strictly
+[tool.ruff.lint.flake8-annotations]
+allow-star-arg-any = false
+suppress-dummy-args = false
+suppress-none-returning = false
+mypy-init-return = true
+
+# Enforce strict import ordering
+[tool.ruff.lint.isort]
+combine-as-imports = true
+force-wrap-aliases = true
+
+# Require explicit updates when code changes
+[tool.ruff.lint.pydocstyle]
+convention = "pep257" # or "numpy" / "google"''
 
 [tool.mypy]
 python_version = "3.10"
@@ -34,7 +66,6 @@ warn_unused_configs = true
 [dependency-groups]
 dev = [
     "allowed>=1.5.4",
-    "mypy>=2.4.1",
     "pre-commit>=4.6.2",
     "pyrefly>=1.4.0",
     "pytype>=2024.10.11",

@@ -1,19 +1,37 @@
 repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+  # Ruff version.
+    rev: v0.17.4
+    hooks:
+      # Run the linter.
+      - id: ruff-check
+        args: [ --fix ]
+      # Run the formatter.
+      - id: ruff-format
+
   - repo: https://github.com/pycqa/flake8
-    rev: 7.4.1 # Replace with the latest version or git tag
+    rev: 7.5.0  # Use the latest stable git tag or commit hash
     hooks:
       - id: flake8
-        # Black defaults to 88 characters; ignore E203 to prevent spacing conflicts
-        args: ["--max-line-length=88", "--extend-ignore=E203"]
-      
-  - repo: https://github.com/psf/black-pre-commit-mirror
-    rev: 26.10.1  # Use the latest stable version of Black
-    hooks:
-      - id: black
 
+  - repo: https://github.com/facebook/pyrefly-pre-commit
+    rev: 1.4.1  # Replace with the latest stable tag or commit SHA
+    hooks:
+      - id: pyrefly-check
+        name: Pyrefly (type checking)
+        pass_filenames: false
+        language: system
+  
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v2.4.1  # Replace with the latest version or git tag
     hooks:
       - id: mypy
         # Add third-party type stubs here if your project needs them
         additional_dependencies: [] 
+  
+  - repo: https://github.com/astral-sh/ty-pre-commit
+    # ty version.
+    rev: v0.0.99
+    hooks:
+      - id: ty
+
