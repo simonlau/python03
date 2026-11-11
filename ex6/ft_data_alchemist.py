@@ -8,7 +8,7 @@ Score: TypeAlias = int
 
 
 def main() -> None:
-    print("=== Inventory System Analysis ==")
+    print("=== Game Data Alchemist ==")
     players: list[Player] = [
         "Alice",
         "bob",
@@ -22,16 +22,19 @@ def main() -> None:
     ]
     print(f"Initial list of players: {players}")
 
-    all_caps: list[Player] = [p.capitalize() for p in players]
-    print(f"New list with all names capitalized: {all_caps}")
+    title_cased_players: list[Player] = [p.capitalize() for p in players]
+    print(f"New list with all names capitalized: {title_cased_players}")
 
-    only_caps: list[Player] = [p for p in players if p[0].isupper()]
-    print(f"New list of capitalized names only: {only_caps}")
+    only_capitalized_players: list[Player] = [
+        p for p in players if p.istitle()
+    ]
+    print(f"New list of capitalized names only: {only_capitalized_players}")
 
+    max_score = 1000
     score_dict: dict[Player, Score] = {
         # ruff:ignore[suspicious-non-cryptographic-random-usage]
-        p: random.randint(0, 1000)
-        for p in all_caps
+        p: random.randint(0, max_score)
+        for p in title_cased_players
     }
     print(f"Score dict: {score_dict}")
 
