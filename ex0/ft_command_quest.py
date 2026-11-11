@@ -4,18 +4,16 @@ import sys
 
 
 def main() -> None:
-    print("=== Command Quest ==")
-    total = len(sys.argv) - 1
-    if total == 0:
+    print("=== Command Quest ===")
+    print(f"Program name: {sys.argv[0]}")
+    args = sys.argv[1:]
+    if len(args) == 0:
         print("No arguments provided!")
-        print(f"Total arguments: {total + 1}")
-        return
     i = 0
-    print(f"Arguments received: {total}")
-    while i <= total:
-        print(f"Argument {i}: {sys.argv[i]}")
-        i += 1
-    print(f"Total arguments: {total + 1}")
+    print(f"Arguments received: {len(args)}")
+    for i, arg in enumerate(args, start=1):
+        print(f"Argument {i}: {arg}")
+    print(f"Total arguments: {len(sys.argv)}")
 
 
 if __name__ == "__main__":
