@@ -24,14 +24,8 @@ def gen_player_achievements(
     achievements: list[Achievement],
 ) -> set[Achievement]:
     # ruff:ignore[suspicious-non-cryptographic-random-usage]
-    num = random.randint(3, len(achievements) + 3)
-    i = 0
-    result: set[Achievement] = set()
-    while i < num:
-        # ruff:ignore[suspicious-non-cryptographic-random-usage]
-        result.add(random.choice(achievements))
-        i += 1
-    return result
+    count = random.randint(4, len(achievements))
+    return set(random.sample(achievements, count))
 
 
 def main() -> None:
@@ -50,7 +44,7 @@ def main() -> None:
         "Sharp Mind",
         "Boss Slayer",
     ]
-    print("=== Achievement Tracker System ==\n")
+    print("=== Achievement Tracker System ===\n")
 
     alice: set[Achievement] = gen_player_achievements(achievements)
     bob: set[Achievement] = gen_player_achievements(achievements)
@@ -62,7 +56,7 @@ def main() -> None:
     print(f"Player Charlie: {charlie}")
     print(f"Player Dylan: {dylan}")
 
-    print(f"All distinct achievements: {achievements}")
+    print(f"\nAll distinct achievements: {alice | bob | charlie | dylan}\n")
 
     print(f"Common achievements: {alice & bob & charlie & dylan}\n")
 
