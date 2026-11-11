@@ -30,12 +30,10 @@ def gen_event() -> Generator[Event, None, None]:
 
 
 def consume_event(events: list[Event]) -> Iterator[Event]:
-    while True:
+    while len(events) > 0:
         # ruff:ignore[suspicious-non-cryptographic-random-usage]
-        index = random.randint(0, len(events) - 1)
+        index = random.randrange(len(events))
         yield events.pop(index)
-        if len(events) == 0:
-            return
 
 
 def main() -> None:
