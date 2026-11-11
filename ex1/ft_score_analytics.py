@@ -17,23 +17,33 @@ def str_to_score(s: str) -> Score | None:
 
 
 def main() -> None:
-    print("=== Play Score Analytics ==")
-    total = len(sys.argv) - 1
-    if total == 0:
+    print("=== Player Score Analytics ==")
+    args = sys.argv[1:]
+    if len(args) == 0:
         print("No scores provided. ", end="")
         print("Usage: python3 ft_score_analytics.py <score1> <score2> ...")
         return
 
     scores: list[Score] = [
-        result for x in sys.argv[1:] if (result := str_to_score(x)) is not None
+        result for x in args if (result := str_to_score(x)) is not None
     ]
+
+    if len(scores) == 0:
+        print("No scores provided. ", end="")
+        print("Usage: python3 ft_score_analytics.py <score1> <score2> ...")
+        return
+
+    total = sum(scores)
+    num = len(scores)
+    high = max(scores)
+    low = min(scores)
     print(f"Scores processed: {scores}")
-    print(f"Total players: {len(scores)}")
-    print(f"Total score: {sum(scores)}")
-    print(f"Average score: {sum(scores) / len(scores)}")
-    print(f"High score: {max(scores)}")
-    print(f"Low score: {min(scores)}")
-    print(f"Score range: {max(scores) - min(scores)}")
+    print(f"Total players: {num}")
+    print(f"Total score: {total}")
+    print(f"Average score: {total / num:.1f}")
+    print(f"High score: {high}")
+    print(f"Low score: {low}")
+    print(f"Score range: {high - low}")
 
 
 if __name__ == "__main__":
